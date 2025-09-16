@@ -1,0 +1,214 @@
+
+/* Example for Google Fonts or hosted version */
+/* Import futuristic, condensed sans-serif font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+
+/* ----------------- General ----------------- */
+body {
+  box-sizing: border-box;
+  margin-left: 0px;
+  padding: 0;
+  background: #1e1f22; /* dark panel background for context */
+}
+
+/* ----------------- WOPR Panel ----------------- */
+.wopr-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;             /* keep everything in one row */
+  background: #2a2b2e;
+  border-radius: 6px;
+  padding: 20px 40px;
+  gap: 40px;
+  width: 100%;
+  max-width: 900px;
+  min-width: 700px;
+  margin: 50px auto;             /* center horizontally */
+  box-sizing: border-box;
+
+  min-width: 350px;              /* stop shrinking below this width */
+  overflow: visible;             /* content won't be clipped */
+}
+
+
+/* ----------------- Groups ----------------- */
+.side-group {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-shrink: 0;
+}
+
+.small-btn-group {
+  display: flex;
+  gap: 18px;
+  flex-shrink: 0;
+}
+
+.small-btn-wrapper {
+  display: flex;
+  flex-direction: column; /* button on top, label below */
+  align-items: center;
+  gap: 4px;
+}
+.small-btn-wrapper:hover{
+        transform: scale(1.1);
+
+}
+
+/* ----------------- Round Buttons (Mute / Power) ----------------- */
+.round-btn-wrapper {
+  position: relative;
+  border-style: solid;
+  padding: 0;
+  border: 0.5 solid transparent;
+  background: #2a2b2e;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  transition: box-shadow 0.1s ease, transform 0.1s ease;
+
+  /* Default neumorphic shadow */
+  box-shadow:      4px 4px 6px rgba(0, 0, 0, 0.7);         /* bottom-right shadow */
+}
+
+.round-btn-wrapper:hover {
+  /* Slightly stronger shadow on hover */
+ border-width: 1px;             /* thinner border on hover */
+  transform: scale(1.03); /* optional subtle scaling */
+}
+
+.round-btn-wrapper:active {
+  /* Pressed-in effect: inset shadow */
+      transform: scale(0.97);
+}
+
+.round-btn-wrapper .round-btn-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.icon-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.round-btn-wrapper:hover .icon-overlay {
+  transform: translate(-50%, -50%) scale(1.2);
+  filter: brightness(1.3);
+}
+
+.round-btn-wrapper:active .icon-overlay {
+  filter: brightness(1.3);
+}
+
+
+/* ----------------- Small Buttons ----------------- */
+.small-btn {
+  position: relative;
+  width: 50px;
+  height: 33px;
+  border: none;
+  border-width: 2px;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: black;
+  background: #333436;
+  cursor: pointer;
+
+  /* Neumorphic shadows */
+  box-shadow: 
+   inset -1px -1px 0px #292929, /* top-left highlight */
+    inset 1px 1px 0px #949494c2;  /* bottom-right shadow */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.small-btn:hover {
+  transform: scale(1.1);
+}
+
+.small-btn:active {
+  transform: scale(0.97);
+  
+  background: #2f3033; /* darker background while pressed */
+  box-shadow: inset 2px 2px 4px #1a1a1a,
+              inset -2px -2px 4px #4a4a4a;
+}
+
+/* ----------------- Status Dot ----------------- */
+.status-dot {
+  position: absolute;
+  top: 10px;
+  right: 3px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: rgb(0, 255, 0); /* default */
+  box-shadow: 0 0 4px rgba(0, 255, 0, 0.7); /* subtle glow */
+  transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+}
+
+.small-btn:active .status-dot {
+  background-color: red;
+  transform: scale(1.3);
+  box-shadow: 0 0 6px rgba(255, 0, 0, 0.8);
+}
+
+/* ----------------- Button Label ----------------- */
+.btn-label {
+  font-size: 0.65rem;
+  color: #b5b5b5;
+   font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+/* ----------------- Panel Title ----------------- */
+.title {
+   font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #e6e6e6;
+  letter-spacing: 2px;
+  text-align: center;
+  user-select: none;
+  flex-shrink: 0;
+}
+/* ---------- Responsive Layout ---------- */
+@media (max-width: 768px) {
+  .wopr-panel {
+    flex-wrap: wrap;               /* allow children to wrap to new lines */
+    justify-content: center;       /* center them horizontally */
+    gap: 25px;
+  }
+
+  .title {
+    order: -1;                     /* move title to the first row */
+    width: 100%;
+    text-align: center;
+  }
+
+  .side-group {
+    flex: 1 1 auto;                 /* let them share the row space */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
