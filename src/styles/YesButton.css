@@ -1,0 +1,53 @@
+.yes-btn-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.main-icon {
+  display: block;
+  width: 206px;
+  height: 59px;
+  position: absolute;
+  transform: rotate(0deg);
+  opacity: 1;
+  transition: filter 0.3s ease;
+}
+
+.hover-element {
+  position: absolute;
+  height: 17px;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.hover-tr {
+  top: 1px;
+  right: -206.5px;
+  transform: translate(0, 0);
+}
+
+.hover-bl {
+  bottom: -58px;
+  left: -0px;
+  transform: translate(0, 0);
+}
+
+.yes-btn-wrapper:hover .hover-tr {
+  transform: translate(6px, -6px);
+}
+
+.yes-btn-wrapper:hover .hover-bl {
+  transform: translate(-6px, 6px);
+}
+
+.btn-text {
+  position: absolute;
+  bottom: -38px;
+  left: 80px;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  color: white;
+  pointer-events: none;
+}

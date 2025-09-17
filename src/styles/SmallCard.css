@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-
 .small-card {
   position: relative;
   display: inline-block; 
+  width: 206px;
+  height: 122px;
+  opacity: 1;
 }
 
 .base-icon {
@@ -16,13 +18,14 @@
 
 .center-icon {
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 50%;
   width: 50px;
   height: 50px;
   transform: translate(-50%, -50%);
   z-index: 2;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%) contrast(100%);
 }
 
 .hover-part {
@@ -34,19 +37,18 @@
 
 .hover-top {
   top: 0%;
-  left: 50.2%;
+  left: 50%;
   transform: translate(-50%, 0);
 }
 
 .hover-left {
-  top: 93%;
-    left: -0.3%;
-
+  top: 80%;
+  left: -0.3%;
   transform: translate(0, -50%);
 }
 
 .hover-right {
-  top: 93%;
+  top: 80%;
   right: -0.3%;
   transform: translate(0, -50%);
 }
@@ -64,19 +66,19 @@
 }
 
 .card-label {
-    display: block;
-    margin-top: -45px;
-    margin-left: 58px;           
-    font-size: 30px;
-    font-weight: 600;
-    color: white;
-    letter-spacing: 2px;
-    font-family: 'VT323', monospace;
+  display: block;
+  margin-top: -50px;
+  margin-left: 58px;           
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 2px;
+  font-family: 'VT323', monospace;
   text-shadow: 0 0 10px rgb(255, 254, 254);      
-    pointer-events: none;
-    transition: text-shadow 0.3s ease;
+  pointer-events: none;
+  transition: text-shadow 0.3s ease;
 }
 
 .small-card:hover .card-label {
-    text-shadow: none;
+  text-shadow: none;
 }
