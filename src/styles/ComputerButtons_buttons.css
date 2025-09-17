@@ -76,7 +76,7 @@ body {
 
 .round-btn-wrapper:hover {
   /* Slightly stronger shadow on hover */
- border-width: 1px;             /* thinner border on hover */
+ /* border-width: 1px; */          /*  thinner border on hover */
   transform: scale(1.03); /* optional subtle scaling */
 }
 

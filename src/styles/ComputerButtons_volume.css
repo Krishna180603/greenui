@@ -63,7 +63,7 @@ body {
   position: relative;
   border-style: solid;
   padding: 0;
-  border: 0.5 solid transparent;
+  /* border: 0.5 solid transparent; */
   background: #2a2b2e;
   border-radius: 50%;
   cursor: pointer;

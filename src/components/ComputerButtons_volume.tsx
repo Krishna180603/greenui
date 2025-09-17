@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/ComputerButtons_volume.css";
 import RoundButton from "./PowerButton"; // adjust path as needed
+import SmallButton from "./SmallButton"; // new small button component
 
 const WoprXPanelvol: React.FC = () => {
   return (
@@ -30,19 +31,8 @@ const WoprXPanelvol: React.FC = () => {
       <div className="side-group">
         {/* Small buttons */}
         <div className="small-btn-group">
-          <div className="small-btn-wrapper">
-            <button className="small-btn">
-              <span className="status-dot"></span>
-            </button>
-            <span className="btn-label">CONTRAST</span>
-          </div>
-
-          <div className="small-btn-wrapper">
-            <button className="small-btn">
-              <span className="status-dot"></span>
-            </button>
-            <span className="btn-label">CRT MODE</span>
-          </div>
+          <SmallButton label="CONTRAST" initialOn={false} />
+          <SmallButton label="CRT MODE" initialOn={false} />
         </div>
 
         {/* Power button */}

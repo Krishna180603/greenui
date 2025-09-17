@@ -1,5 +1,6 @@
 import React from "react";
-import RoundButton from "./PowerButton"; // make sure the path is correct
+import RoundButton from "./PowerButton"; // your existing round button
+import SmallButton from "./SmallButton"; // the new small button component
 
 const WoprXPanelbtn: React.FC = () => {
   return (
@@ -16,19 +17,8 @@ const WoprXPanelbtn: React.FC = () => {
 
         {/* Small buttons */}
         <div className="small-btn-group">
-          <div className="small-btn-wrapper">
-            <button className="small-btn">
-              <span className="status-dot"></span>
-            </button>
-            <span className="btn-label">GLOW</span>
-          </div>
-
-          <div className="small-btn-wrapper">
-            <button className="small-btn">
-              <span className="status-dot"></span>
-            </button>
-            <span className="btn-label">MOTION</span>
-          </div>
+          <SmallButton label="GLOW" initialOn={false} />
+          <SmallButton label="MOTION" initialOn={false} />
         </div>
       </div>
 
@@ -39,23 +29,12 @@ const WoprXPanelbtn: React.FC = () => {
       <div className="side-group">
         {/* Small buttons */}
         <div className="small-btn-group">
-          <div className="small-btn-wrapper">
-            <button className="small-btn">
-              <span className="status-dot"></span>
-            </button>
-            <span className="btn-label">CONTRAST</span>
-          </div>
-
-          <div className="small-btn-wrapper">
-            <button className="small-btn">
-              <span className="status-dot"></span>
-            </button>
-            <span className="btn-label">CRT MODE</span>
-          </div>
+          <SmallButton label="CONTRAST" initialOn={false} />
+          <SmallButton label="CRT MODE" initialOn={false} />
         </div>
 
         {/* Power button */}
-         <RoundButton
+        <RoundButton
           overlayImg="/poweroff.svg"
           overlayAlt="power"
           initialVariant="off"
