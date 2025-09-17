@@ -1,0 +1,108 @@
+.mastercard-red-container {
+  position: relative;
+  display: inline-block; 
+  width: 500px;
+  height: 122px;
+  opacity: 1;
+}
+
+.mastercard-red-container img {
+  position: absolute;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mastercard-red-base {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+
+.mastercard-red-center {
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+}
+
+.mastercard-red-icon-top {
+  width: 150px;
+  top: -83px;
+  left: 51.2%;
+  transform: translateX(-50%);
+}
+
+.mastercard-red-icon-left {
+  width: 150px;
+  left: 0px;
+  top: 140%;
+  transform: translateY(-50%);
+}
+
+.mastercard-red-icon-right {
+  width: 150px;
+  right: 0px;
+  top: 140%;
+  transform: translateY(-50%);
+}
+
+.mastercard-red-container:hover .mastercard-red-icon-top {
+  transform: translateX(-50%) translateY(-15px);
+}
+
+.mastercard-red-container:hover .mastercard-red-icon-left {
+  transform: translate(-15px, calc(-50% + 15px)); 
+}
+
+.mastercard-red-container:hover .mastercard-red-icon-right {
+  transform: translate(15px, calc(-50% + 15px)); 
+}
+
+.mastercard-red-label {
+  position: absolute;
+  bottom: 12px;
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  z-index: 3;
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+}
+
+.mastercard-red-content {
+  color: rgb(255, 0, 0);
+  text-align: center;
+  padding: 10px;
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+}
+
+.mastercard-red-question {
+  font-family: 'VT323', monospace;
+  font-size: 40px;
+  margin-left: 20px;
+  margin-top: -50px;
+  padding: 0;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 40px;
+  margin-bottom: 0px;
+  color: rgb(255, 0, 0);
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+}
+
+.mastercard-red-poll {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  font-size: 17px;
+  color: rgb(255, 0, 0);
+}
+
+.mastercard-red-buttons {
+  display: flex;
+  justify-content: center;   
+  gap: 230px;       
+  margin-top: 20px;          
+  margin-left: -210px;        
+}

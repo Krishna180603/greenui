@@ -1,6 +1,6 @@
 // YesResultBox.tsx
 import React from "react";
-import "../styles/LongYesButton.css";
+import "../styles/LongGreenButton.css";
 
 interface YesResultBoxProps {
   value: number;

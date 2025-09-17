@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/MastercardGreen.css";
-import YesResultBox from "./LongYesButton";
+import YesResultBox from "./LongGreenButton";
 
 interface MastercardProps {
   baseSvg: string;
-  hoverBaseSvg: string;
   topSvg: string;
   leftSvg: string;
   rightSvg: string;
@@ -15,7 +14,6 @@ interface MastercardProps {
 
 const MasterCardGreen: React.FC<MastercardProps> = ({
   baseSvg,
-  hoverBaseSvg,
   topSvg,
   leftSvg,
   rightSvg,
@@ -23,20 +21,10 @@ const MasterCardGreen: React.FC<MastercardProps> = ({
   pollYes,
   pollNo,
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
-    <div
-      className="mastercard-green-container"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      {/* SVG Icons */}
-      <img
-        src={isHovered ? hoverBaseSvg : baseSvg}
-        className="mastercard-green-base"
-        alt="base"
-      />
+    <div className="mastercard-green-container">
+      {/* Static Base SVG */}
+      <img src={baseSvg} className="mastercard-green-base" alt="base" />
       <img src={topSvg} className="mastercard-green-icon-top" alt="top" />
       <img src={leftSvg} className="mastercard-green-icon-left" alt="left" />
       <img src={rightSvg} className="mastercard-green-icon-right" alt="right" />
@@ -51,7 +39,7 @@ const MasterCardGreen: React.FC<MastercardProps> = ({
           <span>{pollNo}% SAID NO</span>
         </div>
 
-        {/* Buttons */}
+        {/* Result Box */}
         <YesResultBox value={34} text="YES" status="WON" />
       </div>
     </div>

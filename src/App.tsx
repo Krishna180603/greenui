@@ -5,8 +5,9 @@ import NavButtonGroup from "./components/NavButtonGroup.tsx";
 import SmallCard from "./components/SmallCard.tsx"
 import YesButton from "./components/YesButton.tsx"
 import MasterCard from "./components/Mastercard.tsx";
-import YesResultBox from "./components/LongYesButton.tsx"
+import YesResultBox from "./components/LongGreenButton.tsx"
 import MasterCardGreen from "./components/MastercardGreen.tsx";
+import MasterCardRed from "./components/MastercardRed.tsx";
 export default function App() {
   return (
     <div style={{ padding: "2rem",height: "100vh" }}>
@@ -49,14 +50,24 @@ export default function App() {
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 <MasterCardGreen
         baseSvg="/mastercardgreen.svg"
-        hoverBaseSvg="/mastercardgreenhover.svg"
         topSvg="/mastercardgreentop.svg"
         leftSvg="/mastercardgreenbleft.svg"
         rightSvg="/mastercardgreenbright.svg"
         question="Do you want to proceed?"
         pollYes={72}
         pollNo={28}
-      /></div>
+      />
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <MasterCardRed
+        baseSvg="/mastercardred.svg"
+        topSvg="/mastercardredtop.svg"
+        leftSvg="/mastercardredbleft.svg"
+        rightSvg="/mastercardredbright.svg"
+        question="Do you want to proceed?"
+        pollYes={72}
+        pollNo={28}
+      />
+      </div>
 
 
 
