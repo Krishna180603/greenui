@@ -1,0 +1,105 @@
+.mastercard-container {
+  position: relative;
+  display: inline-block; 
+  width: 500px;
+  height: 122px;
+  opacity: 1;
+}
+
+.mastercard-container img {
+  position: absolute;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mastercard-base {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+
+.mastercard-center {
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+}
+
+.mastercard-icon-top {
+  width: 150px;
+  top: -83px;
+  left: 51.2%;
+  transform: translateX(-50%);
+}
+
+.mastercard-icon-left {
+  width: 150px;
+  left: 0px;
+  top: 140%;
+  transform: translateY(-50%);
+}
+
+.mastercard-icon-right {
+  width: 150px;
+  right: 0px;
+  top: 140%;
+  transform: translateY(-50%);
+}
+
+.mastercard-container:hover .mastercard-icon-top {
+  transform: translateX(-50%) translateY(-15px);
+}
+
+.mastercard-container:hover .mastercard-icon-left {
+  transform: translate(-15px, calc(-50% + 15px)); 
+}
+
+.mastercard-container:hover .mastercard-icon-right {
+  transform: translate(15px, calc(-50% + 15px)); 
+}
+
+.mastercard-label {
+  position: absolute;
+  bottom: 12px;
+  color: #fff;
+  font-weight: bold;
+  z-index: 3;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+.mastercard-content {
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+.mastercard-question {
+  font-family: 'VT323', monospace;
+  font-size: 40px;
+  margin-left: 20px;
+  margin-top: -50px;
+  padding: 0;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 40px;
+  margin-bottom: 0px;
+}
+
+.mastercard-poll {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  font-size: 17px;
+}
+
+.mastercard-buttons {
+  display: flex;
+  justify-content: center;   
+  gap: 230px;       
+  margin-top: 20px;          
+  margin-left: -210px;        
+}
