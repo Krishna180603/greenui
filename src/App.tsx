@@ -14,6 +14,7 @@ import Text from "./components/text.tsx";
 import Loading from "./components/Loading.tsx";
 import MasterCardList from "./components/MastercardList.tsx";
 import Tab from "./components/Tab.tsx";
+import MarketList from "./components/MarketList.tsx";
 export default function App() {
   return (
     <div style={{ padding: "2rem",height: "100vh" }}>
@@ -109,6 +110,9 @@ export default function App() {
 
   </span>
 </Tab>
+ <div >
+      <MarketList />
+    </div>
 
     </div>
   
