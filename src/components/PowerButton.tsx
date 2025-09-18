@@ -29,13 +29,13 @@ const PowerButton: React.FC<RoundButtonProps> = ({
   const getBaseImg = () => {
     switch (variant) {
       case "on":
-        return "/button_on.png"; // green
+        return "/powerandmute/button_on.png"; // green
       case "off":
-        return "/roundbutton.png"; // gray
+        return "/powerandmute/roundbutton.png"; // gray
       case "dull":
-        return "/roundbutton-dull.png"; // dimmed
+        return "/powerandmute/roundbutton-dull.png"; // dimmed
       default:
-        return "/roundbutton.png";
+        return "/powerandmute/roundbutton.png";
     }
   };
 

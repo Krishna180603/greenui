@@ -9,7 +9,7 @@ const WoprXPanelemp: React.FC = () => {
       <div className="side-group">
         {/* Volume button */}
         <RoundButton
-          overlayImg="/download.svg"
+          overlayImg="/powerandmute/download.svg"
           overlayAlt="mute"
           initialVariant="off"
           onClick={(state) => console.log("Volume button:", state)}
@@ -21,7 +21,7 @@ const WoprXPanelemp: React.FC = () => {
 
       {/* Right side */}
        <RoundButton
-          overlayImg="/poweroff.svg"
+          overlayImg="/powerandmute/poweroff.svg"
           overlayAlt="power"
           initialVariant="off"
           onClick={(state) => console.log("Power button:", state)}

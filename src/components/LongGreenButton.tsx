@@ -11,7 +11,7 @@ interface YesResultBoxProps {
 const YesResultBox: React.FC<YesResultBoxProps> = ({ value, text = "YES", status = "WON" }) => {
   return (
     <div className="yes-box-wrapper">
-      <img src="/mastercardgreenresult.svg" alt="border" className="yes-box-border" />
+      <img src="/mastercardgreen/mastercardgreenresult.svg" alt="border" className="yes-box-border" />
       
       {/* Overlay Text */}
       <div className="yes-box-text">

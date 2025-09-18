@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.loading-root {
+  font-family: "VT323", monospace;
+  display: inline-block;
+  color: #ffffff;
+  user-select: none;
+}
+
+.loading-blocks {
+  display: inline-flex;
+  align-items: center;
+  gap: -0.25rem;
+  font-size: 20px; 
+  text-shadow: 0 0 4px rgba(255,255,255,0.35); 
+  line-height: 1;
+}
+
+.percent-text {
+  margin-left: 0.5rem;
+  font-size: 20px;
+  opacity: 0.95;
+}
+
+.block {
+  display: inline-block;
+  text-align: center;
+  transition: color 200ms ease, transform 180ms ease, text-shadow 200ms ease;
+}
+
+.block.filled {
+  color: #ffffff;
+  text-shadow: 0 0 15px rgb(255, 255, 255);
+  transform: translateY(-1px);
+}
+
+.block.empty {
+  color: rgba(165, 165, 165, 0.904);
+  text-shadow: none;
+  transform: translateY(0);
+}
+
+.loading-bar {
+  width: 220px; 
+  height: 8px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 6px;
+  margin-top: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(255,255,255,0.03) inset;
+}
+
+.loading-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
+  box-shadow: 0 0 8px rgba(255,255,255,0.25);
+  width: 0%;
+  transition: width 400ms ease;
+}
+
+.loading-bar-fill::after {
+  content: "";
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 30%;
+  left: -20%;
+  transform: translateX(0);
+  background: linear-gradient(90deg, rgba(255,255,255,0.0), rgba(255,255,255,0.12), rgba(255,255,255,0.0));
+  animation: shimmer 2s linear infinite;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(300%); }
+}
+
+@media (max-width: 480px) {
+  .loading-blocks { font-size: 16px; }
+  .loading-bar { width: 160px; height: 6px; }
+  .percent-text { font-size: 16px; }
+}

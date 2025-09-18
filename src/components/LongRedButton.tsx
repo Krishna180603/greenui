@@ -11,7 +11,7 @@ interface YesResultBoxProps {
 const NoResultBox: React.FC<YesResultBoxProps> = ({ value, text = "YES", status = "Lost" }) => {
   return (
     <div className="no-box-wrapper">
-      <img src="/mastercardredresult.svg" alt="border" className="no-box-border" />
+      <img src="/mastercardred/mastercardredresult.svg" alt="border" className="no-box-border" />
       
       {/* Overlay Text */}
       <div className="no-box-text">

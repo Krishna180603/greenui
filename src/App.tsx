@@ -8,6 +8,12 @@ import MasterCard from "./components/Mastercard.tsx";
 import YesResultBox from "./components/LongGreenButton.tsx"
 import MasterCardGreen from "./components/MastercardGreen.tsx";
 import MasterCardRed from "./components/MastercardRed.tsx";
+import MasterCardWhite from "./components/MastercardWhiteResult.tsx";
+import Logo from "./components/Logo.tsx";
+import Text from "./components/text.tsx";
+import Loading from "./components/Loading.tsx";
+import MasterCardList from "./components/MastercardList.tsx";
+import Tab from "./components/Tab.tsx";
 export default function App() {
   return (
     <div style={{ padding: "2rem",height: "100vh" }}>
@@ -19,28 +25,28 @@ export default function App() {
   
   <SmallCard
     label="Example"
-    centerSvg="/fox.svg"
-    topSvg="/smallcardtop.svg"
-    leftSvg="/smallcardleft.svg"
-    rightSvg="/smallcardright.svg"
-    baseSvg="/smallcardoff.svg"
-    hoverBaseSvg="/smallcardon.svg"
+    centerSvg="/smallcard/fox.svg"
+    topSvg="/smallcard/smallcardtop.svg"
+    leftSvg="/smallcard/smallcardleft.svg"
+    rightSvg="/smallcard/smallcardright.svg"
+    baseSvg="/smallcard/smallcardoff.svg"
+    hoverBaseSvg="/smallcard/smallcardon.svg"
   />
 <br /><br />
   <YesButton
     label="YES"
-    baseSvg="/yesbuttonoff.svg"
-    hoverBaseSvg="/yesbuttonon.svg"
-    topRightSvg="/yestopright.svg"
-    bottomLeftSvg="/yesbottomleft.svg"
+    baseSvg="/yesbutton/yesbuttonoff.svg"
+    hoverBaseSvg="/yesbutton/yesbuttonon.svg"
+    topRightSvg="/yesbutton/yestopright.svg"
+    bottomLeftSvg="/yesbutton/yesbottomleft.svg"
   />
 <br /><br /> <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   <MasterCard
-  baseSvg="/mastercardwhitehover.svg"       // default base image
-  hoverBaseSvg="/mastercardwhite.svg"       // hover base image
-  topSvg="/mastercardwhitetop.svg"
-  leftSvg="/mastercardwhitebleft.svg"
-  rightSvg="/mastercardwhitebright.svg"
+  baseSvg="/mastercardwhite/mastercardwhitehover.svg"       // default base image
+  hoverBaseSvg="/mastercardwhite/mastercardwhite.svg"       // hover base image
+  topSvg="/mastercardwhite/mastercardwhitetop.svg"
+  leftSvg="/mastercardwhite/mastercardwhitebleft.svg"
+  rightSvg="/mastercardwhite/mastercardwhitebright.svg"
   question="WILL INDIA INVADE PAKISTAN IN 2025?"
   pollYes={93}
   pollNo={7}
@@ -49,25 +55,63 @@ export default function App() {
 <YesResultBox value={34} text="YES" status="WON" />
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 <MasterCardGreen
-        baseSvg="/mastercardgreen.svg"
-        topSvg="/mastercardgreentop.svg"
-        leftSvg="/mastercardgreenbleft.svg"
-        rightSvg="/mastercardgreenbright.svg"
+        baseSvg="/mastercardgreen/mastercardgreen.svg"
+        topSvg="/mastercardgreen/mastercardgreentop.svg"
+        leftSvg="/mastercardgreen/mastercardgreenbleft.svg"
+        rightSvg="/mastercardgreen/mastercardgreenbright.svg"
         question="Do you want to proceed?"
         pollYes={72}
         pollNo={28}
       />
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       <MasterCardRed
-        baseSvg="/mastercardred.svg"
-        topSvg="/mastercardredtop.svg"
-        leftSvg="/mastercardredbleft.svg"
-        rightSvg="/mastercardredbright.svg"
+        baseSvg="/mastercardred/mastercardred.svg"
+        topSvg="/mastercardred/mastercardredtop.svg"
+        leftSvg="/mastercardred/mastercardredbleft.svg"
+        rightSvg="/mastercardred/mastercardredbright.svg"
         question="Do you want to proceed?"
         pollYes={72}
         pollNo={28}
       />
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <MasterCardWhite
+        baseSvg="/mastercardwhite/mastercardwhite.svg"
+        topSvg="/mastercardwhite/mastercardwhitetop.svg"
+        leftSvg="/mastercardwhite/mastercardwhitebleft.svg"
+        rightSvg="/mastercardwhite/mastercardwhitebright.svg"
+        question="Do you want to proceed?"
+        pollYes={72}
+        pollNo={28}
+      />
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <div>
+      <div >
+        <Logo width={101.87} />
       </div>
+      </div>
+       <div>
+      <Text variant="heading">Main Heading (44px)</Text>
+      <Text variant="b1">Section Title (32px)</Text>
+      <Text variant="b2">Subheading / Button Size (28px)</Text>
+      <Text variant="b3">Paragraph Text (24px)</Text>
+    </div>
+<br /><br /><br /><br />
+    <div>
+      <Loading percent={50} />
+      
+      </div>
+      <br /><br /><br /><br /><br /><br />
+      <MasterCardList/>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <Tab src="/tab/whitetab.svg">
+  <span style={{ fontFamily: "VT323", fontSize: "20px", color: "black" }}>
+        <Text variant="b2" className="colors" >Market List</Text>
+
+  </span>
+</Tab>
+
+    </div>
+  
 
 
 

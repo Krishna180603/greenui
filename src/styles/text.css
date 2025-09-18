@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.text {
+  font-family: "VT323", monospace;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.829); /* soft subtle glow */
+}
+
+/* Variants */
+.text.heading {
+  font-size: 44px;
+}
+
+.text.b1 {
+  font-size: 32px;
+}
+
+.text.b2 {
+  font-size: 28px;
+}
+
+.text.b3 {
+  font-size: 24px;
+}
+
+.colors{
+    color: black;
+}

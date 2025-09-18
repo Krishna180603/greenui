@@ -9,8 +9,8 @@ interface MasterCardProps {
   leftSvg: string;
   rightSvg: string;
   question: string;
-  pollYes: number;   // % for Yes
-  pollNo: number;    // % for No
+  pollYes: number;  
+  pollNo: number;    
 }
 
 const MasterCard: React.FC<MasterCardProps> = ({
@@ -31,9 +31,8 @@ const MasterCard: React.FC<MasterCardProps> = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* SVG Icons */}
       <img
-        src={isHovered ? hoverBaseSvg : baseSvg}
+        src={isHovered ? baseSvg:hoverBaseSvg}
         className="mastercard-base"
         alt="base"
       />
@@ -41,31 +40,28 @@ const MasterCard: React.FC<MasterCardProps> = ({
       <img src={leftSvg} className="mastercard-icon-left" alt="left" />
       <img src={rightSvg} className="mastercard-icon-right" alt="right" />
 
-      {/* Card content */}
       <div className="mastercard-content">
         <div className="mastercard-question">{question}</div>
 
-        {/* Poll percentages */}
         <div className="mastercard-poll">
           <span>{pollYes}% SAID YES</span>
           <span>{pollNo}% SAID NO</span>
         </div>
 
-        {/* Buttons */}
         <div className="mastercard-buttons">
           <YesButton
             label="YES"
-            baseSvg="/yesbuttonoff.svg"
-            hoverBaseSvg="/yesbuttonon.svg"
-            topRightSvg="/yestopright.svg"
-            bottomLeftSvg="/yesbottomleft.svg"
+            baseSvg="/yesbutton/yesbuttonoff.svg"
+            hoverBaseSvg="/yesbutton/yesbuttonon.svg"
+            topRightSvg="/yesbutton/yestopright.svg"
+            bottomLeftSvg="/yesbutton/yesbottomleft.svg"
           />
           <YesButton
             label="NO"
-            baseSvg="/yesbuttonoff.svg"
-            hoverBaseSvg="/yesbuttonon.svg"
-            topRightSvg="/yestopright.svg"
-            bottomLeftSvg="/yesbottomleft.svg"
+            baseSvg="/yesbutton/yesbuttonoff.svg"
+            hoverBaseSvg="/yesbutton/yesbuttonon.svg"
+            topRightSvg="/yesbutton/yestopright.svg"
+            bottomLeftSvg="/yesbutton/yesbottomleft.svg"
           />
         </div>
       </div>
